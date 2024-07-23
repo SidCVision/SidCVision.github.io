@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sidharth Gautam</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <meta charset="utf-8">
+  <title>particles.js</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+   
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <!--Animated headline css-->
+  <link rel="stylesheet" href="css/jquery.animatedheadline.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    * {box-sizing: border-box;}
+    
+    .img-comp-container {
+      position: relative;
+      height: 200px; /*should be the same height as the images*/
+    }
+    
+    .img-comp-img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      overflow:hidden;
+    }
+    
+    .img-comp-img img {
+      display:block;
+      vertical-align:middle;
+    }
+    
+    .img-comp-slider {
+      position: absolute;
+      z-index:9;
+      cursor: ew-resize;
+      /*set the appearance of the slider:*/
+      width: 40px;
+      height: 40px;
+      background-color: #2196F3;
+      opacity: 0.7;
+      border-radius: 50%;
+    }
+    </style>
+    <script>
+    function initComparisons() {
+      var x, i;
+      /*find all elements with an "overlay" class:*/
+      x = document.getElementsByClassName("img-comp-overlay");
+      for (i = 0; i < x.length; i++) {
+        /*once for each "overlay" element:
+        pass the "overlay" element as a parameter when executing the compareImages function:*/
+        compareImages(x[i]);
+      }
+      function compareImages(img) {
+        var slider, img, clicked = 0, w, h;
+        /*get the width and height of the img element*/
+        w = img.offsetWidth;
+        h = img.offsetHeight;
+        /*set the width of the img element to 50%:*/
+        img.style.width = (w / 2) + "px";
+        /*create slider:*/
+        slider = document.createElement("DIV");
+        slider.setAttribute("class", "img-comp-slider");
+        /*insert slider*/
+        img.parentElement.insertBefore(slider, img);
+        /*position the slider in the middle:*/
+        slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+        slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+        /*execute a function when the mouse button is pressed:*/
+        slider.addEventListener("mousedown", slideReady);
+        /*and another function when the mouse button is released:*/
+        window.addEventListener("mouseup", slideFinish);
+        /*or touched (for touch screens:*/
+        slider.addEventListener("touchstart", slideReady);
+        /*and released (for touch screens:*/
+        window.addEventListener("touchend", slideFinish);
+        function slideReady(e) {
+          /*prevent any other actions that may occur when moving over the image:*/
+          e.preventDefault();
+          /*the slider is now clicked and ready to move:*/
+          clicked = 1;
+          /*execute a function when the slider is moved:*/
+          window.addEventListener("mousemove", slideMove);
+          window.addEventListener("touchmove", slideMove);
+        }
+        function slideFinish() {
+          /*the slider is no longer clicked:*/
+          clicked = 0;
+        }
+        function slideMove(e) {
+          var pos;
+          /*if the slider is no longer clicked, exit this function:*/
+          if (clicked == 0) return false;
+          /*get the cursor's x position:*/
+          pos = getCursorPos(e)
+          /*prevent the slider from being positioned outside the image:*/
+          if (pos < 0) pos = 0;
+          if (pos > w) pos = w;
+          /*execute a function that will resize the overlay image according to the cursor:*/
+          slide(pos);
+        }
+        function getCursorPos(e) {
+          var a, x = 0;
+          e = (e.changedTouches) ? e.changedTouches[0] : e;
+          /*get the x positions of the image:*/
+          a = img.getBoundingClientRect();
+          /*calculate the cursor's x coordinate, relative to the image:*/
+          x = e.pageX - a.left;
+          /*consider any page scrolling:*/
+          x = x - window.pageXOffset;
+          return x;
+        }
+        function slide(x) {
+          /*resize the image:*/
+          img.style.width = x + "px";
+          /*position the slider:*/
+          slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+        }
+      }
+    }
+    </script>
+
+
+
+  <!-- =======================================================
+  * Template Name: Personal
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<body>
+
+  
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div id="particles-js"></div> <!-- particles.js container -->
+    <div class="container">    
+      <h1><a href="index.html">Sidharth Gautam</a></h1>
+      <!--Ph.D. |Computer Vision | Machine Learning | Deep Learning | -->
+      <h2>
+        <span class="ah-words-wrapper">
+          <b class="is-visible">Assistant Professor</b>
+          <b>Researcher</b>
+          <b>Data Science Enthusiast</b>
+          <b>Computer Vision Expert</b>
+          <b>Freelancer</b>
+        </span>
+      </h2>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#publications">Publications</a></li>
+          <li><a class="nav-link" href="#teaching">Teaching</a></li>
+          <li><a class="nav-link" href="#research">Research</a></li>
+          <li><a class="nav-link" href="#students">Students</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://scholar.google.com/citations?user=1q_0-rMAAAAJ" class="ai ai-google-scholar big-icon"><i class="bi bi-google"></i></a>
+        <a href="https://www.linkedin.com/in/dr-sidharth-gautam-b8460289/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+  
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <p>About me</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/me.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Assistant Prof. Sr. Grade-I</h3>
+          <style>
+            p {
+              text-align: justify;
+            }
+            </style>
+                                 
+                                 <p>
+                                  Hello 👋, I'm Sidharth! <br>
+                                  I am an Assistant Professor in the Department of Embedded Technology at the School of Electronics (SENSE), 
+                                  <a href="https://vit.ac.in/" style="font-weight: bold; color: rgb(238, 135, 39);">VIT Vellore</a>. 
+                                  I obtained my PhD in Image Processing from the Department of Electrical Engineering, 
+                                  <a href="https://home.iitd.ac.in/" style="font-weight: bold; color: rgb(238, 135, 39);">IIT Delhi</a>, India. 
+                                  During my doctoral studies, I had the privilege of working under the mentorship of 
+                                  <a href="https://iitd.irins.org/profile/53149" style="font-weight: bold; color: rgb(238, 135, 39);">Dr. B.K. Panigrahi</a> 
+                                  and <a href="https://tapankgandhi.com/" style="font-weight: bold; color: rgb(238, 135, 39);">Dr. Tapan Gandhi</a>, 
+                                  who served as my advisors. My doctoral dissertation focused on developing 
+                                  <strong><em>Prior-Based Optimization Approaches for Single Image Dehazing</em></strong>, 
+                                  aiming to improve attributes such as color, contrast, and sharpness affected by haze. 
+                                  My research offers innovative solutions for visibility enhancement in aerial, terrestrial, and underwater imaging, 
+                                  surpassing contemporary learning-based methods. 
+                                  <br><br>
+                                  To learn more about my skills, projects, and research interests, 
+                                  feel free to explore my <a href="#">profile</a> or get in touch with me directly.
+                              </p>
+                              
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
+
+
+    
+
+    <!-- ======= Interests ======= -->
+    <div class="interests container">
+      <div class="section-title">
+        <h2>Research Interests</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4">
+          <div class="icon-box">
+          <i class="ri-image-circle-line" style="color: #ffbb2c;"></i>
+            <h3>Terrestrial Imaging</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-vidicon-line" style="color: #5578ff;"></i>
+            <h3>Computer Vision </h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="ri-stack-line" style="color: #e80368;"></i>
+            <h3>Deep Learning </h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="ri-robot-2-line" style="color: #e361ff;"></i>
+            <h3>Machine Learning </h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="ri-contrast-drop-fill" style="color: #e361ff;"></i>
+            <h3>Underwater Imaging</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+          <div class="icon-box">
+            <i class="ri-expand-height-line" style="color: #e361ff;"></i>
+            <h3>Satellite Imaging</h3>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Interests -->
+
+    <!-- ======= Education ======= -->
+    <div class="resume">
+    <div class="container">
+      <div class="section-title">
+        <h2>Background</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+            <h4>Ph.D in Computer Vison &amp; Image Processing</h4> 
+            <h5>2016 - 2022</h5>
+            <p><em>Indian Institute of Technology, New Delhi, India</em></p>
+          </div>
+          <div class="resume-item">
+            <h4>M.Tech in Signal Processing &amp; Digital Design</h4> 
+            <h5>2012 - 2014</h5>
+            <p><em>Delhi Technological University, New Delhi, India</em></p>
+          </div>
+          <div class="resume-item">
+            <h4>B.Tech in Electronics &amp; Communication Engineering</h4> 
+            <h5>2004 - 2008</h5>
+            <p><em>UIET, Kurukshetra University, India</em></p>
+          </div>
+
+        </div>
+        
+        <div class="col-lg-6">
+          <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+            <h4>Assistant Professor Sr. Grade-I</h4> 
+            <h5>May 2022 - Present</h5>
+            <p><em>Vellore Institute of Technology, Vellore, India </em></p>
+          </div>
+          <div class="resume-item">
+            <h4>Academic Fellow </h4> 
+            <h5>July 2014 - Dec 2015</h5>
+            <p><em>BML Munjal University, India </em></p>
+          </div>
+          <div class="resume-item">
+            <h4>Lecturer </h4>
+            <h5>July 2009 - July 2012</h5> 
+            <p><em>Aravali College of Engineering and Management, India </em></p>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section><!-- End About Section -->
+
+  
+
+<!-- ======= Publications Section ======= -->
+<section id="publications" class="publications">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Publications</h2>
+      <p>Publications in peer-reviewed Journals</p>
+    </div>
+
+    <!--------------------------------------------->
+    <div class="row">
+      <div class="icon-box">
+        <h4><a href="">Journals</a></h4>
+
+    
+    <div class="row mb-4">
+      <div class="col-lg-4">
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="assets/img/our_house.png" width="300" height="200" style="border: none;"> 
+          </div>
+          <div class="img-comp-img img-comp-overlay">
+            <img src="assets/img/house.png" width="300" height="200"> <!-- Replace with appropriate overlay image or leave as placeholder -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 align-self-center"> 
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S1077314223000280" style="font-weight: bold; color: rgb(238, 135, 39);"> WMCP-EM: An integrated dehazing framework for visibility restoration in single image</a><a class="more-link" href="assets/articles/WMCP-EM.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> [PDF]</a><br>
+        <strong>S. Gautam</strong>, T. Gandhi, B. K. Panigrahi<br>
+        <i>Computer Vision and Image Understanding, Elsevier,</i> Volume 229, 2023, 103648, ISSN 1077-3142.<a class="more-link" href="https://www.scimagojr.com/journalsearch.php?q=24161&tip=sid&clean=0" target="_blank"><i class="fas fa-external-link-alt"></i> <strong>[Q1]</strong></a><br>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-lg-4">
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="assets/img/forest_CCP.jpg" width="300" height="200" style="border: none;"> 
+          </div>
+          <div class="img-comp-img img-comp-overlay">
+            <img src="assets/img/forest.jpg" width="300" height="200"> <!-- Replace with appropriate overlay image or leave as placeholder -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 align-self-center">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9201388" style="font-weight: bold; color: rgb(238, 135, 39);"> An improved Air-light estimation scheme for single haze images using color constancy prior</a><a class="more-link" href="assets/articles/CCP.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> [PDF]</a><br>
+        <strong>S. Gautam</strong>, T. Gandhi, B. K. Panigrahi<br>
+        <i>IEEE Signal Processing Letters,</i> vol. 27, pp. 1695-1699, 2020, doi: 10.1109/LSP.2020.3025462.<a class="more-link" href="https://www.scimagojr.com/journalsearch.php?q=24161&tip=sid&clean=0" target="_blank"><i class="fas fa-external-link-alt"></i> <strong>[Q1]</strong></a>
+      </div>
+    </div>
+
+
+    <div class="row mb-4">
+      <div class="col-lg-4">
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="assets/img/UAV_out.png" width="300" height="200" style="border: none;"> 
+          </div>
+          <div class="img-comp-img img-comp-overlay">
+            <img src="assets/img/UAV_in.png" width="300" height="200"> <!-- Replace with appropriate overlay image or leave as placeholder -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 align-self-center">
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S1047320320302108" style="font-weight: bold; color: rgb(238, 135, 39);"> A Model-based dehazing scheme for unmanned aerial vehicle system using radiance boundary constraint and graph model</a><a class="more-link" href="assets/articles/Model_based.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> [PDF]</a><br>
+        <strong>S. Gautam</strong>, T. Gandhi, B. K. Panigrahi<br>
+        <i>Journal of Visual Comm. and Image Representation, Elsevier,</i> Volume 74, 2021, 102993, ISSN 1047-3203.<a class="more-link" href="https://www.scimagojr.com/journalsearch.php?q=24161&tip=sid&clean=0" target="_blank"><i class="fas fa-external-link-alt"></i> <strong>[Q1]</strong></a>
+      </div>
+    </div>
+
+
+<div class="row" style="padding-top: 40px;">
+      <div class="icon-box">
+        <h4><a href="">Conferences </a></h4>
+        <div class="row mb-4">
+          <div class="col-lg-4">
+            <div class="img-comp-container">
+              <div class="img-comp-img">
+                <img src="assets/img/UW_out.png" width="300" height="200" style="border: none;"> 
+              </div>
+              <div class="img-comp-img img-comp-overlay">
+                <img src="assets/img/UW_in.png" width="300" height="200"> <!-- Replace with appropriate overlay image or leave as placeholder -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 align-self-center"> 
+            <a href="https://ieeexplore.ieee.org/document/8451248" style="font-weight: bold; color: rgb(238, 135, 39);"> An Advanced Visibility Restoration Technique for Underwater Images</a><a class="more-link" href="assets/articles/ICIP.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> [PDF]</a><br>
+            <strong>S. Gautam</strong>, T. Gandhi, B. K. Panigrahi<br>
+            <i>IEEE International Conference on Image Processing, ICIP-2018.</i><br>
+            <i>Athens, Greece</i><br>
+          </div>
+        </div>
+    
+        <div class="row mb-4">
+          <div class="col-lg-4">
+            <div class="img-comp-container">
+              <div class="img-comp-img">
+                <img src="assets/img/our_school.png" width="300" height="200" style="border: none;"> 
+              </div>
+              <div class="img-comp-img img-comp-overlay">
+                <img src="assets/img/school.png" width="300" height="200"> <!-- Replace with appropriate overlay image or leave as placeholder -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 align-self-center">
+            <a href="https://dl.acm.org/doi/10.1145/3293353.3293431" style="font-weight: bold; color: rgb(238, 135, 39);"> Single image dehazing using image boundary constraint and nearest neighborhood optimization</a><a class="more-link" href="assets/articles/ICVGIP.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> [PDF]</a><br>
+            <strong>S. Gautam</strong>, T. Gandhi, B. K. Panigrahi<br>
+            <i>Indian Conference on Computer Vision, Graphics and Image Processing, ICVGIP 2018, IIT Hyderabad.</i> 
+          </div>
+        </div>
+        
+      </div>
+  </div>
+
+</div>
+</section><!-- End Publications Section -->
+
+
+
+
+
+
+
+
+
+  <!-- ======= Teaching Section ======= -->
+  <section id="teaching" class="teaching">
+    <div class="container">
+      <div class="section-title">
+        <h2>Teaching</h2>
+      </div>
+      <h4><a href="">Fall Semester 2024-25 </a></h4>
+      <ul>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">BECE102L</a>: Digital Systems Design (UG, No. of Students: 130)</li>
+      </ul>
+      <h4><a href="">Winter & WEI Semester 2023-24 </a></h4>
+      <ul>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">CSI2006</a>: Microprocessor and Interfacing Techniques (UG, No. of Students: 135, <a style="font-weight: bold; color: rgb(238, 135, 39);">Avg. Feedback=<strong>83.03%</strong></a>)</li>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">BECE102L</a>: Digital Systems Design (UG, No. of Students: 65)</li>
+      </ul>
+      <h4><a href="">Fall & Summer Semester 2022-23 </a></h4>
+      <ul>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">ECE3502</a>: IoT Domain Analyst (UG, No. of Students: 04)</li>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">BECE102L</a>: Digital Systems Design (UG, No. of Students: 135, <a style="font-weight: bold; color: rgb(238, 135, 39);">Avg. Feedback=<strong>83.05%</strong></a>)</li>
+      </ul>
+      <h4><a href="">Winter Semester 2022-23 </a></h4>
+      <ul>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">BECE204L</a>: Microprocessors and Microcontrollers (UG, No. of Students: 65, <a style="font-weight: bold; color: rgb(238, 135, 39);">Avg. Feedback=<strong>75.26%</strong></a>)</li>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">MEDS505L</a>: Real Time Operating System (PG, No. of Students: 45, <a style="font-weight: bold; color: rgb(238, 135, 39);">Avg. Feedback=<strong>84.82%</strong></a>)</li>
+      </ul>
+      <h4><a href="">Fall & WEI Semester 2022-23 </a></h4>
+      <ul>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">BECE204L</a>: Analog Circuits (UG, No. of Students: 60, <a style="font-weight: bold; color: rgb(238, 135, 39);">Avg. Feedback=<strong>70.37%</strong></a>)</li>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">MEDS609L</a>: Fault Tolerance and Dependable Systems (PG, No. of Students: 50, <a style="font-weight: bold; color: rgb(238, 135, 39);">Avg. Feedback=<strong>88.48%</strong></a>)</li>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">ECE1004</a>: Signals and Systems (UG, No. of Students: 06)</li>
+      </ul>
+      <h4><a href="">Summer Semester Special 2021-22 </a></h4>
+      <ul>
+        <li><a style="font-weight: bold; color: rgb(238, 135, 39);">MEDS609L</a>: Fault Tolerance and Dependable Systems (PG, No. of Students: 73)</li>
+        </ul>
+    </div>
+  </section><!-- End Teaching Section -->
+
+
+  <!-- ======= Research Section ======= -->
+<section id="research" class="research">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Research Projects</h2>
+    </div>
+
+    <!-- Visual Results -->
+    <div class="root-content" style="padding-top: 10px; text-align: center;">
+      <h1 class="section-name">&#128293; Single Image Dehazing &#128293;</h1>
+      <p class="section-content-text">
+        The process of removing haze using a single image and compensating for the attenuated scene radiance is known as <strong>single image dehazing</strong>. Here are some typical dehazing cases.
+      </p>
+      <table style="border: 0;">
+        <tbody>
+          <tr>
+            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="300" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6947e5e0-c8a8-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="339" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5d95be06-c8a9-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="302" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=420e396e-c8aa-11ed-b5bd-6595d9b17862"></iframe></td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="border: 0; border-top: 0;">
+        <tbody>
+          <tr>
+            <td style="padding: 10px; width: 510px;"><iframe frameborder="0" class="juxtapose" height="390" width="518" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3080e84c-c8ad-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 510px;"><iframe frameborder="0" class="juxtapose" height="390" width="445" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=45271b70-c8a0-11ed-b5bd-6595d9b17862"></iframe></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Paper Information -->
+    <div class="root-content" style="padding-top: 10px;">
+      <div class="section-content">
+        <h1 class="section-name">Introduction</h1>
+        <p class="section-content-text">
+          Due to adverse weather conditions, haze, smoke, or mist is the most common problem in outdoor scenes. A hazy environment reduces atmospheric visibility and hinders the performance of many computer-vision based applications used for object tracking, vehicle surveillance, road traffic regulation, and navigation. The process of removing haze using a single image and compensating for the attenuated energy is known as <strong>single image dehazing</strong>. Retrieving haze-free results using a single image is an ill-posed and under-constrained problem due to the lack of information such as the <strong>Transmission-map</strong> and <strong>air-light</strong> contribution. This research project aims to develop <strong>novel priors and boundary constraints using statistical/physical properties or heuristic assumptions to forecast the unknown information required for dehazing</strong>. To this end, we aim to propose AI powered dehazing techniques to handle different illumination and haze conditions that may be useful for restoring visibility in aerial, terrestrial, and underwater imaging.
+        </p>
+      </div>
+    </div>
+
+    <!-- Visual Results -->
+    <div class="root-content" style="padding-top: 30px; text-align: center;">
+      <h1 class="section-name">&#128293; Development of AI-powered Driver Assistance System to see through haze &#128293;</h1>
+      <table style="border: 0; width: 100%;">
+        <tbody>
+          <tr>
+            <td style="padding: 10px; text-align: center;">
+              <iframe frameborder="0" class="juxtapose" height="455" width="600" src="assets/img/adas.gif" style="display: block; margin: 0 auto;"></iframe>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Paper Information -->
+    <div class="root-content" style="padding-top: 0px;">
+      <div class="section-content">
+        <h1 class="section-name">Introduction</h1>
+        <p class="section-content-text">
+          In northern India, haze coupled with smoke and air pollution obscure atmospheric visibility, causing navigation challenges and significantly disrupting rail and road traffic services as it causes difficulty discerning the object features, such as colours and textures of the scene. However, these image features are the prerequisites for many vision-based automated systems and applications, such as object detection, recognition, navigation and monitoring. Under adverse atmospheric conditions, driving through the haze is always a pain, but the development of technology to see through the haze can assist drivers in avoiding fatal accidents and massive pileups on highways. Therefore, to improve driver visibility, we need to develop an AI-powered ADAS (Advanced Driver Assistance System) that can see through haze. We can increase driver visibility and alertness in inclement weather by placing a camera system coupled with a depth sensor on the vehicle's dashboard. The system assesses the scene depth in real-time, which not only helps the driver in real-time navigation and avoids delays in making appropriate decisions due to poor atmospheric visibility. The targeted technique aims to be developed using specialized hardware or software in a standardized computer environment and also work for many other real-time vision-based applications like road traffic regulation, video surveillance, object detection, and tracking.
+        </p>
+      </div>
+    </div>
+
+        <!-- Visual Results -->
+        <div class="root-content" style="padding-top: 30px; text-align: center;">
+          <h1 class="section-name">&#128293; Image/Video De-raining &#128293;</h1>
+          <table style="margin: 0 auto;">
+            <tr>
+                <td style="padding: 10px; text-align: center;">
+                    <div style="display: inline-block; margin: 0 auto;">
+                        <iframe frameborder="0" class="juxtapose" height="300" width="500" src="assets/img/rain_in.jpg"></iframe>
+                    </div>
+                </td>
+                <td style="padding: 10px; text-align: center;">
+                    <div style="display: inline-block; margin: 0 auto;">
+                        <iframe frameborder="0" class="juxtapose" height="300" width="500" src="assets/img/rain_out.jpg"></iframe>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        
+        </div>
+      
+        <!-- Paper Information -->
+        <div class="root-content" style="padding-top: 0px;">
+          <div class="section-content">
+            <h1 class="section-name">Introduction</h1>
+            <p class="section-content-text">
+              Single image de-raining is a critical task in computer vision aimed at removing rain or water droplet artifacts from single images. The motivation behind developing effective de-raining techniques stems from the significant degradation rain introduces to outdoor images, impacting visibility and image quality. Raindrops on camera lenses or airborne droplets scatter light, causing blurring, obscuration of details, and reduced contrast, which can hinder subsequent computer vision tasks such as object detection, recognition, and scene analysis.
+
+In computer vision applications, clear and high-quality images are crucial for accurate processing and interpretation. By eliminating rain-induced distortions, de-raining algorithms enhance image clarity and aid in improving the performance of various computer vision tasks. For instance, in autonomous driving, where real-time detection of obstacles and lane markings is essential for safe navigation, de-raining enables clearer images from vehicle-mounted cameras, thereby enhancing the reliability and robustness of detection algorithms in adverse weather conditions.
+
+Moreover, in surveillance and security systems, where clear visibility is paramount for identifying individuals, objects, or activities, effective de-raining techniques ensure that surveillance footage remains useful and actionable even under rainy weather conditions. Additionally, in satellite imagery and remote sensing applications, where environmental monitoring and analysis rely on capturing accurate and clear images, de-raining plays a crucial role in ensuring the fidelity of collected data.</p>
+          </div>
+        </div>
+
+  </div>
+</section><!-- End Research Section -->
+
+
+<!-- ======= Students Section ======= -->
+<section id="students" class="students">
+  <div class="container">
+    <div class="section-title">
+      <h2>PhD Students</h2>
+    </div>
+    <div class="row">
+      <div class="icon-box">
+        <p>I am looking for a dynamic and highly motivated postgraduate students for <a style="font-weight: bold; color: rgb(238, 135, 39);"> part-time/full-time PhD </a> positions. My profound passion lies at the intersection of computer vision, ML, and DL. However, within this exciting tapestry, I am fervently dedicated to decipher the intricacies of low-level vision imaging for computer-vision applications. 
+        <br/><br/>
+        If you are interested Please go through my web pages, see the recent papers, be explicit about your interests and how that aligns with what i am doing. Details of the PhD advertisement and application can be found <a href="https://admissions.vit.ac.in/phdapplication/login" style="font-weight: bold; color: rgb(238, 135, 39);"> here.</a></p>
+      </div>
+    </div>
+
+    <div class="section-title" style="padding-top: 30px;">
+      <h2>M.Tech Students</h2>
+    <!--  <p>2023-2024</p>-->
+    </div>
+    <div class="row">
+      <div class="icon-box">
+        <p>I am currently seeking motivated <a style="font-weight: bold; color: rgb(238, 135, 39);"> M.tech</a> students to collaborate on exciting research projects in Computer Vision. If you're passionate about exploring innovative solutions in image processing, machine learning, and visual computing, let's work together!<br/><br/>
+        Below is the list of past M.Tech students who have worked with me on a research projects:
+        </div>
+    </div>
+    
+    <div class="row" style="margin-bottom: 30px;">
+      <div class="col-lg-4" data-aos="fade-right">
+        <img src="assets/img/rosh.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <style>
+          p {
+            text-align: justify;
+          }
+          </style>                    
+         <p> 
+         Name: <strong>ROSHAN R K (23MES0029) </strong></a><br>
+         Branch: Embedded Systems (SENSE) <br>
+         Current Position: Graduate Technical Intern, Intel Banglore <br>
+         SET Project: <a style="font-weight: bold; color: rgb(238, 135, 39);"><em>L-DRN: A LSTM-based De-Raining network for instantaneous visibility improvement in rainy images.</em></a> <br>
+         Venue:  <a href="https://cvip2024.iiitdm.ac.in/" style="font-weight: bold;"> 9th International Conference on Computer Vision & Image Processing, Springer. </a><br>
+         Profile: <a class="profile-link" href="https://www.linkedin.com/in/roshan-r-k/" target="_blank" rel="noreferrer noopener">https://www.linkedin.com/in/roshan-r-k/.</a> <br>
+         Contact: roshantjk@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-lg-4" data-aos="fade-right">
+        <img src="assets/img/vijay.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <style>
+          p {
+            text-align: justify;
+          }
+          </style>                    
+         <p> 
+         Name: <strong>VIJAY KRISHNA (23MES0030) </strong></a><br>
+         Branch: Embedded Systems (SENSE) <br>
+         Current Position: Embedded System Engineer, Prezitec Health (Startup)<br>
+         SET Project: L-DRN: A LSTM-based De-Raining network for instantaneous visibility improvement in rainy images.<br>
+         Venue:  9th International Conference on Computer Vision & Image Processing, Springer. <br>
+         Profile: <a class="profile-link" href="
+         https://www.linkedin.com/in/vijay-krishna-076447150/;hl=en" target="_blank" rel="noreferrer noopener">https://www.linkedin.com/in/vijay-krishna-076447150/</a> <br>
+         Contact: vijay.kirishana@gmail.com</p>
+      </div>
+    </div> 
+  </div> 
+</section><!-- End Research Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Contact Me</p>
+      </div>
+
+      <div class="row mt-2">
+
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>My Cabin Address</h3>
+            <p> SJT-710K, VIT Vellore, </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://scholar.google.com/citations?user=1q_0-rMAAAAJ" class="fa-google-scholar"><i class="bi bi-google"></i></a> 
+              <a href="https://www.linkedin.com/in/dr-sidharth-gautam-b8460289/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Me</h3>
+            <p>sidharth.gautam@vit.ac.in</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>Call Me</h3>
+            <p>+91 9540 7076 00</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+      </form>
+
+      <div style="background-color: #0c0000; text-align: center; padding-top: 35px; padding-bottom: 35px; position: relative;">
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-e3f2d7e8-5ce1-4ace-b3b7-10f089166aac" data-elfsight-app-lazy></div>
+        <p style="text-align: center;">Visitor Count</p>
+    </div>
+    
+    
+    </div>
+  </section><!-- End Contact Section -->
+
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    <p style="text-align: right;">&copy; 2020 Sidharth Gautam ·</p>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- stats.js -->
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+ 
+  <!-- scripts -->
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/initComparisons().js"></script>
+
+<script>
+  /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+  initComparisons();
+  </script>
+
+</body>
+
+
+
+</html>
