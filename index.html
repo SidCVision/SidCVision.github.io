@@ -3,6 +3,9 @@
   
 
 <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>Sidharth Gautam</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -512,82 +515,92 @@
 
 
   <!-- ======= Research Section ======= -->
-  <section id="research" class="research">
-    <div class="container">
-      <div class="section-title">
-        <h2>Research Projects</h2>
-      </div>
+<section id="research" class="research">
+  <div class="container">
 
-      <!-- Visual Results -->
-      <div class="root-content" style="text-align: center;">
-        <h1 class="section-name">&#128293; Single Image Dehazing &#128293;</h1>
+    <div class="section-title">
+      <h2>Research Projects</h2>
+    </div>
+
+    <!-- Visual Results -->
+    <div class="root-content" style="padding-top: 10px; text-align: center;">
+      <h1 class="section-name">&#128293; Single Image Dehazing &#128293;</h1>
+      <p class="section-content-text">
+        The process of removing haze using a single image and compensating for the attenuated scene radiance is known as <strong>single image dehazing</strong>. Here are some typical dehazing cases.
+      </p>
+      <table style="border: 0;">
+        <tbody>
+          <tr>
+            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="300" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6947e5e0-c8a8-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="339" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5d95be06-c8a9-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="302" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=420e396e-c8aa-11ed-b5bd-6595d9b17862"></iframe></td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="border: 0; border-top: 0;">
+        <tbody>
+          <tr>
+            <td style="padding: 10px; width: 510px;"><iframe frameborder="0" class="juxtapose" height="390" width="518" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3080e84c-c8ad-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 510px;"><iframe frameborder="0" class="juxtapose" height="390" width="445" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=45271b70-c8a0-11ed-b5bd-6595d9b17862"></iframe></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Paper Information -->
+    <div class="root-content" style="padding-top: 10px;">
+      <div class="section-content">
+        <h1 class="section-name">Introduction</h1>
         <p class="section-content-text">
-          The process of removing haze using a single image and compensating for the attenuated scene radiance is known as <strong>single image dehazing</strong>. Here are some typical dehazing cases.
+          Due to adverse weather conditions, haze, smoke, or mist is the most common problem in outdoor scenes. A hazy environment reduces atmospheric visibility and hinders the performance of many computer-vision based applications used for object tracking, vehicle surveillance, road traffic regulation, and navigation. The process of removing haze using a single image and compensating for the attenuated energy is known as <strong>single image dehazing</strong>. Retrieving haze-free results using a single image is an ill-posed and under-constrained problem due to the lack of information such as the <strong>Transmission-map</strong> and <strong>air-light</strong> contribution. This research project aims to develop <strong>novel priors and boundary constraints using statistical/physical properties or heuristic assumptions to forecast the unknown information required for dehazing</strong>. To this end, we aim to propose AI powered dehazing techniques to handle different illumination and haze conditions that may be useful for restoring visibility in aerial, terrestrial, and underwater imaging.
         </p>
-        <table>
-          <tbody>
-            <tr>
-              <td><iframe frameborder="0" class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6947e5e0-c8a8-11ed-b5bd-6595d9b17862"></iframe></td>
-              <td><iframe frameborder="0" class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5d95be06-c8a9-11ed-b5bd-6595d9b17862"></iframe></td>
-              <td><iframe frameborder="0" class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=420e396e-c8aa-11ed-b5bd-6595d9b17862"></iframe></td>
-            </tr>
-          </tbody>
-        </table>
-        <table>
-          <tbody>
-            <tr>
-              <td><iframe frameborder="0" class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3080e84c-c8ad-11ed-b5bd-6595d9b17862"></iframe></td>
-              <td><iframe frameborder="0" class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=45271b70-c8a0-11ed-b5bd-6595d9b17862"></iframe></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
+    </div>
 
-      <!-- Paper Information -->
-      <div class="root-content">
-        <div class="section-content">
-          <h1 class="section-name">Introduction</h1>
-          <p class="section-content-text">
-            Due to adverse weather conditions, haze, smoke, or mist is the most common problem in outdoor scenes. A hazy environment reduces atmospheric visibility and hinders the performance of many computer-vision based applications used for object tracking, vehicle surveillance, road traffic regulation, and navigation. The process of removing haze using a single image and compensating for the attenuated energy is known as <strong>single image dehazing</strong>. Retrieving haze-free results using a single image is an ill-posed and under-constrained problem due to the lack of information such as the <strong>Transmission-map</strong> and <strong>air-light</strong> contribution. This research project aims to develop <strong>novel priors and boundary constraints using statistical/physical properties or heuristic assumptions to forecast the unknown information required for dehazing</strong>. To this end, we aim to propose AI powered dehazing techniques to handle different illumination and haze conditions that may be useful for restoring visibility in aerial, terrestrial, and underwater imaging.
-          </p>
-        </div>
-      </div>
-
-      <!-- Visual Results -->
-      <div class="root-content" style="text-align: center;">
-        <h1 class="section-name">&#128293; Development of AI-powered Driver Assistance System to see through haze &#128293;</h1>
-        <table>
-          <tbody>
-            <tr>
-              <td><iframe frameborder="0" class="juxtapose" src="assets/img/adas.gif" style="display: block; margin: 0 auto;"></iframe></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Visual Results -->
+    <div class="root-content" style="padding-top: 30px; text-align: center;">
+      <h1 class="section-name">&#128293; Development of AI-powered Driver Assistance System to see through haze &#128293;</h1>
+      <table style="border: 0; width: 100%;">
+        <tbody>
+          <tr>
+            <td style="padding: 10px; text-align: center;">
+              <iframe frameborder="0" class="juxtapose" height="455" width="600" src="assets/img/adas.gif" style="display: block; margin: 0 auto;"></iframe>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   
-      <!-- Paper Information -->
-      <div class="root-content">
-        <div class="section-content">
-          <h1 class="section-name">Introduction</h1>
-          <p class="section-content-text">
-            In northern India, haze coupled with smoke and air pollution obscure atmospheric visibility, causing navigation challenges and significantly disrupting rail and road traffic services as it causes difficulty discerning the object features, such as colours and textures of the scene. However, these image features are the prerequisites for many vision-based automated systems and applications, such as object detection, recognition, navigation and monitoring. Under adverse atmospheric conditions, driving through the haze is always a pain, but the development of technology to see through the haze can assist drivers in avoiding fatal accidents and massive pileups on highways. Therefore, to improve driver visibility, we need to develop an AI-powered ADAS (Advanced Driver Assistance System) that can see through haze. We can increase driver visibility and alertness in inclement weather by placing a camera system coupled with a depth sensor on the vehicle's dashboard. The system assesses the scene depth in real-time, which not only helps the driver in real-time navigation and avoids delays in making appropriate decisions due to poor atmospheric visibility. The targeted technique aims to be developed using specialized hardware or software in a standardized computer environment and also work for many other real-time vision-based applications like road traffic regulation, video surveillance, object detection, and tracking.
-          </p>
-        </div>
+    <!-- Paper Information -->
+    <div class="root-content" style="padding-top: 0px;">
+      <div class="section-content">
+        <h1 class="section-name">Introduction</h1>
+        <p class="section-content-text">
+          In northern India, haze coupled with smoke and air pollution obscure atmospheric visibility, causing navigation challenges and significantly disrupting rail and road traffic services as it causes difficulty discerning the object features, such as colours and textures of the scene. However, these image features are the prerequisites for many vision-based automated systems and applications, such as object detection, recognition, navigation and monitoring. Under adverse atmospheric conditions, driving through the haze is always a pain, but the development of technology to see through the haze can assist drivers in avoiding fatal accidents and massive pileups on highways. Therefore, to improve driver visibility, we need to develop an AI-powered ADAS (Advanced Driver Assistance System) that can see through haze. We can increase driver visibility and alertness in inclement weather by placing a camera system coupled with a depth sensor on the vehicle's dashboard. The system assesses the scene depth in real-time, which not only helps the driver in real-time navigation and avoids delays in making appropriate decisions due to poor atmospheric visibility. The targeted technique aims to be developed using specialized hardware or software in a standardized computer environment and also work for many other real-time vision-based applications like road traffic regulation, video surveillance, object detection, and tracking.
+        </p>
       </div>
+    </div>
 
-      <!-- Visual Results -->
-      <div class="root-content" style="text-align: center;">
-        <h1 class="section-name">&#128293; Image/Video De-raining &#128293;</h1>
-        <table>
-          <tbody>
+        <!-- Visual Results -->
+        <div class="root-content" style="padding-top: 30px; text-align: center;">
+          <h1 class="section-name">&#128293; Image/Video De-raining &#128293;</h1>
+          <table style="margin: 0 auto;">
             <tr>
-              <td><iframe frameborder="0" class="juxtapose" src="assets/img/rain_in.jpg"></iframe></td>
-              <td><iframe frameborder="0" class="juxtapose" src="assets/img/rain_out.jpg"></iframe></td>
+                <td style="padding: 10px; text-align: center;">
+                    <div style="display: inline-block; margin: 0 auto;">
+                        <iframe frameborder="0" class="juxtapose" height="300" width="500" src="assets/img/rain_in.jpg"></iframe>
+                    </div>
+                </td>
+                <td style="padding: 10px; text-align: center;">
+                    <div style="display: inline-block; margin: 0 auto;">
+                        <iframe frameborder="0" class="juxtapose" height="300" width="500" src="assets/img/rain_out.jpg"></iframe>
+                    </div>
+                </td>
             </tr>
-          </tbody>
         </table>
-      </div>
-      
+        
+        
+        </div>
       
         <!-- Paper Information -->
         <div class="root-content" style="padding-top: 0px;">
