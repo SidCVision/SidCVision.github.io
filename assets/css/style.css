@@ -110,7 +110,7 @@ h6 {
   display: flex;
   align-items: center;
   z-index: 997;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 #header * {
@@ -199,6 +199,26 @@ h6 {
     flex-direction: column;
     align-items: center;
   }
+
+  .section-title p {
+    font-size: 28px;
+  }
+
+  .resume .resume-title {
+    font-size: 22px;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 16px;
+  }
+
+  .resume .resume-item h5 {
+    font-size: 14px;
+  }
+
+  .resume .resume-item ul li {
+    font-size: 12px;
+  }
 }
 
 /* Header Top */
@@ -243,6 +263,41 @@ h6 {
   #header.header-top h1 {
     font-size: 26px;
   }
+
+  #header h1 {
+    font-size: 28px;
+  }
+
+  #header h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .section-title p {
+    font-size: 24px;
+  }
+
+  .resume .resume-title {
+    font-size: 20px;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 14px;
+  }
+
+  .resume .resume-item h5 {
+    font-size: 12px;
+  }
+
+  .resume .resume-item ul li {
+    font-size: 10px;
+  }
+
+  .section-name {
+    font-size: 1.2em;
+  }
+
+
 }
 
 /*--------------------------------------------------------------
@@ -254,6 +309,7 @@ h6 {
 .navbar {
   padding: 0;
   margin-top: 35px;
+  overflow: hidden;
 }
 
 .navbar ul {
@@ -830,18 +886,10 @@ section .container {
   left: 0;
   bottom: 0;
   padding: 15px;
-  text-align: right;
+  text-align: center; /* Center align text */
   font-size: 13px;
   color: #fff;
   z-index: 999999;
-}
-
-@media (max-width: 992px) {
-  .credits {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-  }
 }
 
 .credits a {
@@ -853,4 +901,74 @@ section .container {
   color: #fff;
 }
 
-   
+@media (max-width: 992px) {
+  .credits {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    top: 120px;
+  }
+  section.section-show {
+    top: 80px;
+  }
+  .img-comp-container {
+    height: auto;
+  }
+  .img-comp-img img {
+    width: 100%;
+    height: auto;
+  }
+  .img-comp-slider {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .img-comp-container {
+    height: auto;
+  }
+  .img-comp-img img {
+    width: 100%;
+    height: auto;
+  }
+  .img-comp-slider {
+    width: 20px;
+    height: 20px;
+  }
+
+  #header h1 {
+    font-size: 24px;
+  }
+
+  #header h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section-title p {
+    font-size: 20px;
+  }
+
+  .resume .resume-title {
+    font-size: 18px;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 12px;
+  }
+
+  .resume .resume-item h5 {
+    font-size: 10px;
+  }
+
+  .resume .resume-item ul li {
+    font-size: 8px;
+  }
+}
+

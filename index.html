@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/jquery.animatedheadline.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -67,6 +67,41 @@
       background-color: #2196F3;
       opacity: 0.7;
       border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .img-comp-container {
+        height: auto;
+      }
+      .img-comp-img img {
+        width: 100%;
+        height: auto;
+      }
+      .img-comp-slider {
+        width: 30px;
+        height: 30px;
+      }
+      .responsive-iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (max-width: 576px) {
+      .img-comp-container {
+        height: auto;
+      }
+      .img-comp-img img {
+        width: 100%;
+        height: auto;
+      }
+      .img-comp-slider {
+        width: 20px;
+        height: 20px;
+      }
+      .responsive-iframe {
+        width: 100%;
+        height: auto;
+      }
     }
     </style>
     <script>
@@ -397,7 +432,7 @@
       <div class="col-lg-7 align-self-center">
         <a href="https://ieeexplore.ieee.org/abstract/document/9201388" style="font-weight: bold; color: rgb(238, 135, 39);"> An improved Air-light estimation scheme for single haze images using color constancy prior</a><a class="more-link" href="assets/articles/CCP.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> [PDF]</a><br>
         <strong>S. Gautam</strong>, T. Gandhi, B. K. Panigrahi<br>
-        <i>IEEE Signal Processing Letters,</i> vol. 27, pp. 1695-1699, 2020, doi: 10.1109/LSP.2020.3025462.<a class="more-link" href="https://www.scimagojr.com/journalsearch.php?q=24161&tip=sid&clean=0" target="_blank"><i class="fas fa-external-link-alt"></i> <strong>[Q1]</strong></a>
+        <i>IEEE Signal Processing Letters,</i> vol. 27, pp. 1695-1699, 2020, doi: 10.1109/LSP.2020.3025462.<a class="more-link" href="https://www.scimagojr.com/journalsearch.php?q=17316&tip=sid&clean=0" target="_blank"><i class="fas fa-external-link-alt"></i> <strong>[Q1]</strong></a>
       </div>
     </div>
 
@@ -416,7 +451,7 @@
       <div class="col-lg-7 align-self-center">
         <a href="https://www.sciencedirect.com/science/article/abs/pii/S1047320320302108" style="font-weight: bold; color: rgb(238, 135, 39);"> A Model-based dehazing scheme for unmanned aerial vehicle system using radiance boundary constraint and graph model</a><a class="more-link" href="assets/articles/Model_based.pdf" target="_blank"><i class="fas fa-external-link-alt"></i> [PDF]</a><br>
         <strong>S. Gautam</strong>, T. Gandhi, B. K. Panigrahi<br>
-        <i>Journal of Visual Comm. and Image Representation, Elsevier,</i> Volume 74, 2021, 102993, ISSN 1047-3203.<a class="more-link" href="https://www.scimagojr.com/journalsearch.php?q=24161&tip=sid&clean=0" target="_blank"><i class="fas fa-external-link-alt"></i> <strong>[Q1]</strong></a>
+        <i>Journal of Visual Comm. and Image Representation, Elsevier,</i> Volume 74, 2021, 102993, ISSN 1047-3203.<a class="more-link" href="https://www.scimagojr.com/journalsearch.php?q=25592&tip=sid&clean=0" target="_blank"><i class="fas fa-external-link-alt"></i> <strong>[Q1]</strong></a>
       </div>
     </div>
 
@@ -531,17 +566,17 @@
       <table style="border: 0;">
         <tbody>
           <tr>
-            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="300" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6947e5e0-c8a8-11ed-b5bd-6595d9b17862"></iframe></td>
-            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="339" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5d95be06-c8a9-11ed-b5bd-6595d9b17862"></iframe></td>
-            <td style="padding: 10px; width: 340px;"><iframe frameborder="0" class="juxtapose" height="455" width="302" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=420e396e-c8aa-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 340px;"><iframe class="responsive-iframe" frameborder="0" height="455" width="300" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6947e5e0-c8a8-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 340px;"><iframe class="responsive-iframe" frameborder="0" height="455" width="339" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5d95be06-c8a9-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 340px;"><iframe class="responsive-iframe" frameborder="0" height="455" width="302" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=420e396e-c8aa-11ed-b5bd-6595d9b17862"></iframe></td>
           </tr>
         </tbody>
       </table>
       <table style="border: 0; border-top: 0;">
         <tbody>
           <tr>
-            <td style="padding: 10px; width: 510px;"><iframe frameborder="0" class="juxtapose" height="390" width="518" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3080e84c-c8ad-11ed-b5bd-6595d9b17862"></iframe></td>
-            <td style="padding: 10px; width: 510px;"><iframe frameborder="0" class="juxtapose" height="390" width="445" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=45271b70-c8a0-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 510px;"><iframe class="responsive-iframe" frameborder="0" height="390" width="518" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3080e84c-c8ad-11ed-b5bd-6595d9b17862"></iframe></td>
+            <td style="padding: 10px; width: 510px;"><iframe class="responsive-iframe" frameborder="0" height="390" width="445" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=45271b70-c8a0-11ed-b5bd-6595d9b17862"></iframe></td>
           </tr>
         </tbody>
       </table>
@@ -560,15 +595,8 @@
     <!-- Visual Results -->
     <div class="root-content" style="padding-top: 30px; text-align: center;">
       <h1 class="section-name">&#128293; Development of AI-powered Driver Assistance System to see through haze &#128293;</h1>
-      <table style="border: 0; width: 100%;">
-        <tbody>
-          <tr>
-            <td style="padding: 10px; text-align: center;">
-              <iframe frameborder="0" class="juxtapose" height="455" width="600" src="assets/img/adas.gif" style="display: block; margin: 0 auto;"></iframe>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="display: flex; justify-content: center;"></div>
+      <img height="100%" width="100%" src="assets/img/adas.gif" style="max-width: 100%; display: block; margin: 0 auto;">
     </div>
   
     <!-- Paper Information -->
@@ -584,22 +612,15 @@
         <!-- Visual Results -->
         <div class="root-content" style="padding-top: 30px; text-align: center;">
           <h1 class="section-name">&#128293; Image/Video De-raining &#128293;</h1>
-          <table style="margin: 0 auto;">
-            <tr>
-                <td style="padding: 10px; text-align: center;">
-                    <div style="display: inline-block; margin: 0 auto;">
-                        <iframe frameborder="0" class="juxtapose" height="300" width="500" src="assets/img/rain_in.jpg"></iframe>
-                    </div>
-                </td>
-                <td style="padding: 10px; text-align: center;">
-                    <div style="display: inline-block; margin: 0 auto;">
-                        <iframe frameborder="0" class="juxtapose" height="300" width="500" src="assets/img/rain_out.jpg"></iframe>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        
-        
+          <table style="border: 0;">
+            <tbody>
+              <tr>
+          <td style="padding: 10px; width: 340px;"></td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vF5tmBatqoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       
         <!-- Paper Information -->
@@ -776,8 +797,8 @@ Moreover, in surveillance and security systems, where clear visibility is paramo
     <!-- You can delete the links only if you purchased the pro version. -->
     <!-- Licensing information: https://bootstrapmade.com/license/ -->
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    <p style="text-align: right;">&copy; 2020 Sidharth Gautam ·</p>
+    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+    <p>&copy; 2020 Sidharth Gautam ·</p>
   </div>
 
   <!-- Vendor JS Files -->
