@@ -14,7 +14,9 @@
   <meta name="author" content="Vincent Garreau" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" media="screen" href="css/style.css">
-   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+ 
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -220,6 +222,7 @@
           <li><a class="nav-link" href="#publications">Publications</a></li>
           <li><a class="nav-link" href="#teaching">Teaching</a></li>
           <li><a class="nav-link" href="#research">Research</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
           <li><a class="nav-link" href="#students">Students</a></li>
           <li><a class="nav-link" href="#gallery">Gallery</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
@@ -558,7 +561,7 @@
   <div class="container">
 
     <div class="section-title">
-      <h2>Research Projects</h2>
+      <h2>Research Interest</h2>
     </div>
 
     <!-- Visual Results -->
@@ -637,16 +640,178 @@
           <div class="section-content">
             <h1 class="section-name">Introduction</h1>
             <p class="section-content-text">
-              Single image de-raining is a critical task in computer vision aimed at removing rain or water droplet artifacts from single images. The motivation behind developing effective de-raining techniques stems from the significant degradation rain introduces to outdoor images, impacting visibility and image quality. Raindrops on camera lenses or airborne droplets scatter light, causing blurring, obscuration of details, and reduced contrast, which can hinder subsequent computer vision tasks such as object detection, recognition, and scene analysis.
-
-In computer vision applications, clear and high-quality images are crucial for accurate processing and interpretation. By eliminating rain-induced distortions, de-raining algorithms enhance image clarity and aid in improving the performance of various computer vision tasks. For instance, in autonomous driving, where real-time detection of obstacles and lane markings is essential for safe navigation, de-raining enables clearer images from vehicle-mounted cameras, thereby enhancing the reliability and robustness of detection algorithms in adverse weather conditions.
-
-Moreover, in surveillance and security systems, where clear visibility is paramount for identifying individuals, objects, or activities, effective de-raining techniques ensure that surveillance footage remains useful and actionable even under rainy weather conditions. Additionally, in satellite imagery and remote sensing applications, where environmental monitoring and analysis rely on capturing accurate and clear images, de-raining plays a crucial role in ensuring the fidelity of collected data.</p>
+              Single image de-raining is a critical task in computer vision aimed at removing rain or water droplet artifacts from single images. The motivation behind developing effective de-raining techniques stems from the significant degradation rain introduces to outdoor images, impacting visibility and image quality. Raindrops on camera lenses or airborne droplets scatter light, causing blurring, obscuration of details, and reduced contrast, which can hinder subsequent computer vision tasks such as object detection, recognition, and scene analysis. In computer vision applications, clear and high-quality images are crucial for accurate processing and interpretation. By eliminating rain-induced distortions, de-raining algorithms enhance image clarity and aid in improving the performance of various computer vision tasks. For instance, in autonomous driving, where real-time detection of obstacles and lane markings is essential for safe navigation, de-raining enables clearer images from vehicle-mounted cameras, thereby enhancing the reliability and robustness of detection algorithms in adverse weather conditions. 
+              Moreover, in surveillance and security systems, where clear visibility is paramount for identifying individuals, objects, or activities, effective de-raining techniques ensure that surveillance footage remains useful and actionable even under rainy weather conditions. Additionally, in satellite imagery and remote sensing applications, where environmental monitoring and analysis rely on capturing accurate and clear images, de-raining plays a crucial role in ensuring the fidelity of collected data.</p>
           </div>
         </div>
 
   </div>
 </section><!-- End Research Section -->
+
+<!-- ======= Projects Section ======= -->
+<section id="projects" class="projects">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Research Projects</h2>
+    </div>
+
+    <div class="root-content" style="padding-top: 30px; text-align: center;">
+      <h1 class="section-name">&#128293; DriveSense: mart ADAS for Real-Time Perception and Lane Intelligence &#128293;</h1>
+      <!--<img src="assets/img/adas.gif" style="max-width: 100%; display: block; margin: 0 auto;">-->
+      <div style="display: flex; justify-content: center; gap: 20px;">
+            <iframe width="1280" height="720" 
+              src="https://www.youtube.com/embed/hJ9xe-hscS4"> 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+      </div>
+    </div>
+
+    <div class="root-content" style="padding-top: 0px;">
+      <div class="section-content">
+        <h1 class="section-name">Introduction</h1>
+        <p class="section-content-text">
+        This project presents an intelligent vision-based Advanced Driver Assistance System (ADAS) designed for robust scene understanding in real-world driving conditions. The system detects critical road entities—including vehicles, pedestrians, and obstacles—while leveraging focal-length-based geometric modeling for accurate real-time distance estimation. In parallel, it performs continuous lane and drivable area analysis to enable reliable Lane Departure Warning (LDW). To address challenges in poorly marked or unstructured roads, the system introduces an adaptive “virtual centerline” mechanism that ensures consistent lane guidance even in the absence of clear lane markings. The overall framework enhances driving safety by combining perception, geometry, and contextual reasoning into a unified, real-time solution.
+        </p>
+      </div>
+    </div>
+
+    <!-- DESKTOP VIEW -->
+    <div class="showon_desktop">
+      <div class="safety-block-flex">
+
+        <!-- LEFT SIDE: VIDEOS -->
+        <div class="safety-left">
+          <div class="swiper doorbell_usp_swiper">
+            <div class="swiper-wrapper" id="doorbell-usp-images">
+
+              <div class="swiper-slide">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/img/lane-dep_new.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/img/moving-ahead_new.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/img/forward-col.mp4" type="video/mp4">
+                </video>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE CONTENT -->
+        <div class="safety-right">
+
+          <!-- reduced spacing / removed extra reserved space -->
+          <div class="animation-border" id="usp-box" style="margin:0;padding:0;height:auto;">
+            <div class="animation-red-border" style="margin:0;padding:0;">
+              <div class="animation-blue-border-expend" style="position:relative;margin:0;padding:0;min-height:0;">
+                <div class="animation-blue-border" style="margin:0;padding:0;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="safety-head">
+            <!-- remove top margin so heading sits close to highlight area -->
+            <h2 class="safety-heading scroll-animate" style="margin-top:0;">
+              <span class="white-span">Key Features</span>
+            </h2>
+          </div>
+
+          <!-- DESKTOP TABS -->
+          <div class="alerts usp-swiper-steps">
+            <div class="swiper-wrapper right-size-thumb-text">
+
+              <div class="swiper-slide">
+                <div class="left-slide-thumb">
+                  <div class="left-slide-thumb-col">
+                    <h3 class="left-slide-thumb-text">Lane Departure Alert</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="left-slide-thumb">
+                  <div class="left-slide-thumb-col">
+                    <h3 class="left-slide-thumb-text">Forward Collision Alert</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="left-slide-thumb">
+                  <div class="left-slide-thumb-col">
+                    <h3 class="left-slide-thumb-text">Vehicle Moving Ahead Alert</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- safety-right -->
+      </div> <!-- safety-block-flex -->
+    </div> <!-- showon_desktop -->
+
+        <div class="root-content" style="padding-top: 30px; text-align: center;">
+      <h1 class="section-name">&#128293; AdvanceEye: Automated Attendance Monitoring System &#128293;</h1>
+      <!--<img src="assets/img/adas.gif" style="max-width: 100%; display: block; margin: 0 auto;">-->
+      <div style="display: flex; justify-content: center; gap: 20px;">
+            <iframe width="1280" height="720" 
+              src="https://www.youtube.com/embed/fvDR5bCSMw8"> 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+      </div>
+    </div>
+
+    <div class="root-content" style="padding-top: 0px;">
+      <div class="section-content">
+        <h1 class="section-name">Introduction</h1>
+        <p class="section-content-text">
+        This project presents an intelligent vision-based Advanced Driver Assistance System (ADAS) designed for robust scene understanding in real-world driving conditions. The system detects critical road entities—including vehicles, pedestrians, and obstacles—while leveraging focal-length-based geometric modeling for accurate real-time distance estimation. In parallel, it performs continuous lane and drivable area analysis to enable reliable Lane Departure Warning (LDW). To address challenges in poorly marked or unstructured roads, the system introduces an adaptive “virtual centerline” mechanism that ensures consistent lane guidance even in the absence of clear lane markings. The overall framework enhances driving safety by combining perception, geometry, and contextual reasoning into a unified, real-time solution.
+        </p>
+      </div>
+    </div>
+
+            <div class="root-content" style="padding-top: 30px; text-align: center;">
+      <h1 class="section-name">&#128293; NoGlare: Vision-Based Adaptive Headlight System for Safer Night Driving &#128293;</h1>
+      <!--<img src="assets/img/adas.gif" style="max-width: 100%; display: block; margin: 0 auto;">-->
+      <div style="display: flex; justify-content: center; gap: 20px;">
+            <iframe width="1280" height="720" 
+              src="https://www.youtube.com/embed/b0v8NHjnTi4"> 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+      </div>
+    </div>
+
+    <div class="root-content" style="padding-top: 0px;">
+      <div class="section-content">
+        <h1 class="section-name">Introduction</h1>
+        <p class="section-content-text">
+        This project presents a low-cost, vision-based Adaptive Driving Beam (ADB) system designed to mitigate glare from oncoming vehicles while preserving optimal road visibility. The system detects approaching vehicles in real time and dynamically modulates the headlight beam using a simulated LED matrix configuration. By selectively attenuating light in the direction of opposing drivers, the proposed approach minimizes visual discomfort and enhances driving safety without compromising illumination of the surrounding environment. The framework offers a scalable and cost-effective alternative to conventional hardware-intensive ADB systems.
+      </p>
+      </div>
+    </div>
+</div> <!-- container -->
+
+  
+  
+</section>
+
+
 
 
 <!-- ======= Students Section ======= -->
@@ -936,20 +1101,154 @@ Moreover, in surveillance and security systems, where clear visibility is paramo
   requestAnimationFrame(update);
 </script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
- 
-  <!-- scripts -->
+<!-- Template Main JS -->
+<script src="assets/js/main.js"></script>
+
+<!-- Particles / Visual Effects -->
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/app.js"></script>
+
+<!-- jQuery (load early if needed by other scripts) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Custom scripts -->
 <script src="assets/js/script.js"></script>
-<script src="assets/js/initComparisons().js"></script>
+
+<!-- Image Comparison -->
+<script src="assets/js/initComparisons.js"></script>
+
+<!-- Swiper Library MUST load before swiper-init -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Your Swiper Initialization -->
+<script src="assets/js/swiper-init.js"></script>
+
+<!-- Calls the comparison initializer -->
+<script>
+  initComparisons();
+</script>
 
 <script>
-  /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
-  initComparisons();
-  </script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       DESKTOP: VIDEO SWIPER (Left)
+    ===================================================== */
+    const desktopVideoSwiper = new Swiper(".doorbell_usp_swiper", {
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+
+    const desktopStepsSwiper = new Swiper(".usp-swiper-steps", {
+    direction: "vertical",
+    slidesPerView: "auto", 
+    centeredSlides: false,   // 🔥 MUST be false
+    loop: true,
+    speed: 600,
+  });
+
+    // Sync both desktop sliders and update slider-star position/glow
+    function updateStar(index) {
+        const slides = document.querySelectorAll('.usp-swiper-steps .swiper-slide');
+        const star = document.querySelector('.slider-star');
+        const parent = document.querySelector('.animation-blue-border-expend');
+        if (!star || slides.length === 0 || !parent) return;
+
+        // Use real index safe modulo
+        const idx = index % slides.length;
+        const target = slides[idx];
+
+        // Compute vertical center of target relative to parent container
+        const targetRect = target.getBoundingClientRect();
+        const parentRect = parent.getBoundingClientRect();
+
+        // If sizes are zero (not yet laid out), bail out
+        if (targetRect.height === 0 || parentRect.height === 0) return;
+
+        const top = targetRect.top + targetRect.height / 2 - parentRect.top - (star.offsetHeight / 2);
+
+        // Constrain top inside parent
+        const maxTop = Math.max(0, parentRect.height - star.offsetHeight);
+        const clampedTop = Math.min(Math.max(0, top), maxTop);
+
+        // Apply styles (animation via CSS)
+        star.style.position = 'absolute';
+        star.style.left = '12px';
+        star.style.top = clampedTop + 'px';
+
+        // Glow and active class
+        slides.forEach(s => s.classList.remove('active-star'));
+        target.classList.add('active-star');
+        star.classList.add('glow');
+    }
+
+    // Sync both desktop sliders
+    desktopStepsSwiper.on("slideChange", function () {
+        desktopVideoSwiper.slideToLoop(desktopStepsSwiper.realIndex);
+        updateStar(desktopStepsSwiper.realIndex);
+    });
+
+    desktopVideoSwiper.on("slideChange", function () {
+        desktopStepsSwiper.slideToLoop(desktopVideoSwiper.realIndex);
+        updateStar(desktopVideoSwiper.realIndex);
+    });
+
+    // Inject small CSS for star positioning and glow
+    (function injectStarStyles(){
+        const css = `
+        .animation-blue-border-expend { position: relative; }
+        .slider-star { position: absolute; top: 50%; left: 12px; transform: translateY(-50%); transition: top 300ms ease, left 200ms ease, transform 200ms ease; z-index: 20; pointer-events: none; }
+        .slider-star img { width: 36px; height: 36px; transition: filter 300ms ease, transform 300ms ease; display: block; }
+        .slider-star.glow img { filter: drop-shadow(0 0 10px rgba(255,185,0,0.95)) saturate(1.2) brightness(1.05); transform: scale(1.08); }
+        .usp-swiper-steps .swiper-slide.active-star .left-slide-thumb-text { color: #ffbb2c !important; text-shadow: 0 0 8px rgba(255,185,0,0.9); }
+        `;
+        const styleEl = document.createElement('style');
+        styleEl.type = 'text/css';
+        styleEl.appendChild(document.createTextNode(css));
+        document.head.appendChild(styleEl);
+    })();
+
+    // Call updateStar after layout is ready
+    setTimeout(function () {
+        // Use whichever swiper has a valid index
+        const idx = (typeof desktopVideoSwiper !== 'undefined' && desktopVideoSwiper.realIndex != null) ? desktopVideoSwiper.realIndex : 0;
+        updateStar(idx || 0);
+    }, 150);
+
+    /* =====================================================
+       MOBILE: THUMB NAV SWIPER
+    ===================================================== */
+    const mobileThumbs = new Swiper(".bsmartSliderdemo > .swiper[thumbsNavbar]", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        slideToClickedSlide: true,
+    });
+
+    /* =====================================================
+       MOBILE: MAIN VIDEO SWIPER
+    ===================================================== */
+    const mobileVideoSwiper = new Swiper(".mobile-swiper-app", {
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false
+        },
+        thumbs: {
+            swiper: mobileThumbs
+        }
+    });
+
+});
+</script>
 
 </body>
 

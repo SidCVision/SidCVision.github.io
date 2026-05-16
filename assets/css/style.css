@@ -97,7 +97,90 @@ h6 {
   padding-left: 20px; /* Optional: Add padding for spacing */
 }
 
+section {
+  position: absolute;
+  opacity: 0;
+  top: 140px;
+  bottom: 100%;
+}
 
+section.section-show {
+  opacity: 1;
+  top: 100px;
+  bottom: auto;
+}
+
+
+.safety-block-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.safety-left {
+    width: 50%;
+}
+
+.safety-right {
+    width: 45%;
+}
+
+.doorbell_usp_swiper,
+.mobile-swiper-app {
+    width: 100%;
+    height: 350px;  /* Adjust as needed */
+    overflow: hidden;
+}
+
+.doorbell_usp_swiper video,
+.mobile-swiper-app video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider star container must be positioned relative so the star can be positioned inside it */
+.animation-blue-border-expend {
+  position: relative;
+  min-height: 220px; /* ensures room for the vertical track; adjust to your layout */
+}
+
+/* the vertical track beside the labels (thin line) */
+.animation-blue-border-expend::before {
+  content: "";
+  position: absolute;
+  left: 14px;           /* adjust left offset to align with your design */
+  top: 16px;
+  bottom: 16px;
+  width: 2px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* slider-star (red dot) */
+.slider-star {
+  position: absolute;
+  left: 6px;            /* place the dot centered on the track */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: url("../img/red-dot.png") center center no-repeat;
+  background-size: contain;
+  transform: translateY(0);
+  transition: top 300ms cubic-bezier(.22,.9,.37,1), box-shadow 300ms ease, transform 300ms ease;
+  z-index: 5;
+  pointer-events: none;
+  top: 16px;            /* default */
+  box-shadow: 0 0 0 rgba(255,0,0,0);
+}
+
+/* active glow */
+.slider-star.active {
+  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.25);
+  transform: translateY(-50%) scale(1.05);
+}
 
 
 /*--------------------------------------------------------------
@@ -970,5 +1053,42 @@ section .container {
   .resume .resume-item ul li {
     font-size: 8px;
   }
+}
+
+/* =====================================================
+   ADAS PROJECT FIX (GLOBAL - DESKTOP + MOBILE)
+===================================================== */
+
+.usp-swiper-steps {
+  height: 260px;           /* controls visible area */
+  overflow: hidden;        /* prevents overlap */
+  position: relative;
+}
+
+.safety-head {
+  margin-bottom: 20px;     /* spacing from heading */
+}
+
+/* Inactive (gray) */
+.usp-swiper-steps .swiper-wrapper .swiper-slide .left-slide-thumb-text {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Active (white) */
+.usp-swiper-steps .swiper-wrapper .swiper-slide.swiper-slide-active .left-slide-thumb-text {
+  color: #ffffff !important;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+
+/* Align with star animation container */
+.animation-blue-border-expend {
+  min-height: 180px;       /* match swiper height */
+}
+
+.usp-swiper-steps .swiper-slide {
+  padding-left: 30px;   /* 🔥 key fix */
+  box-sizing: border-box;
 }
 
